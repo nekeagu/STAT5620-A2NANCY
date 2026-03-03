@@ -1,0 +1,36 @@
+---
+title: "A2NANCY Vignette"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{A2NANCY Vignette}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(collapse = TRUE, comment = "#>")
+devtools::load_all()
+```
+
+## Using `rmean()`
+
+The `rmean()` function computes the arithmetic mean of a numeric vector.
+
+```{r}
+rmean(c(1, 2, 3, 4, 5))
+```
+
+## Using the `cars` dataset
+
+The `cars` dataset contains stopping distances of cars at different speeds.
+
+```{r}
+head(cars)
+```
+
+```{r}
+plot(cars$speed, cars$dist,
+     xlab = "Speed (mph)",
+     ylab = "Stopping distance (ft)",
+     main = "Speed vs Stopping Distance")
+```
